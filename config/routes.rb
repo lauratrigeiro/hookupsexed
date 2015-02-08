@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'home#index'
    resources :conversations, :only => [:new, :create] do
-    resources :messages, :only => [:new, :create, :show]
+    resources :messages, :only => [:create, :index]
   end
 
   # Example of regular route:
