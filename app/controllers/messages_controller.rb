@@ -2,6 +2,8 @@ class MessagesController < ApplicationController
 
   	def create
     	@message = Message.create!(message_params)
+    	@conversation = Conversation.find(params[:conversation_id])
+    	@path = conversation_path(@conversation)
   	end
 
 
