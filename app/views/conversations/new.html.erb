@@ -6,14 +6,25 @@
 	
 </div>
 <div id="right-col" class="col-md-4">
-	<div id="convo-input">
-		<h4>Let's Hookup with Another Question</h4>
+	<div id="sexpert-profile" class="white right-box">
+		<p class="light-blue">YOU'RE TALKING TO:</p>
+		<%= image_tag("kristy_profile.png", class: "img-responsive centered-pic") %>
+		<p class="light-blue"><%= @other_user.alias.capitalize %></p>
+		<p>Experience: Volunteer for 1 year</p>
+		<p>Hi, I'm Kristy. My favorite song is Partition by Beyonce. <br\> 
+			Sex ed is important to me because it made me an empowered woman.</p>
+		<br/>
+		<%= image_tag("2expert.png", class: "img-responsive centered-pic") %>
+	</div>
+	<div id="convo-input" class="white right-box">
+		<h5><strong>Let's Hookup with Another Question</strong></h5>
 		<div id="message-form">
 			<%= form_for [@conversation, Message.new], remote: true do |f| %>
-			  <%= f.text_area :body, placeholder: "Ask about relationships, STI's, etc." %>
+			  <%= f.text_area :body, placeholder: "Ask about relationships, STI's, etc.", id: "text-area" %>
 			  <%= f.hidden_field :user_id, value: @current_user.id %>
 			  <%= f.hidden_field :conversation_id, value: @conversation.id %>
-			  <%= f.submit "Send", id: "send-btn" %>
+			  <br/>
+			  <%= f.submit "SEND", id: "send-btn" %>
 			<% end %>
 		</div>
 	</div>
