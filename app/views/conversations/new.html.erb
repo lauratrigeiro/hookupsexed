@@ -1,14 +1,11 @@
-<h1>New Conversation?</h1>
- <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
-"data-sid" => @current_user.id, "data-rip" => @other_user.id %> 
-<div id="left-col">
-	<h2>Ask a sexpert</h2>
+<div id="left-col" class="col-md-8">
+	<h1><strong>Ask a sexpert</strong></h1>
 	<div id="conversation">
 		<%= render @conversation.messages %>
 	</div>
 	
 </div>
-<div id="right-col">
+<div id="right-col" class="col-md-4">
 	<div id="convo-input">
 		<h4>Let's Hookup with Another Question</h4>
 		<div id="message-form">

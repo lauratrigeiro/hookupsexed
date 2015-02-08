@@ -12,6 +12,8 @@
 
 body {
 	background-color: #163850;
+	font-family: Helvetica;
+
 }
 
 ul {
@@ -29,4 +31,50 @@ ul {
   #bunny-small {
   	display: inline-block;
   	padding-top: 10px;
+  }
+
+  h1 {
+  	color: white;
+  	margin-bottom: 30px;
+  	text-align: center;
+  }
+
+  #left-col {
+ 	padding-right: 20px;
+  }
+
+.msg-container {
+	margin-bottom: 10px;
+}
+  .message {
+  	background-color: white;
+  	padding: 10px 10px 0 10px;
+  	border-radius: 5px;
+  	color: black;
+	width: 500px;
+	display: inline-block;
+  }
+
+  .my-message {
+  	margin-left: 20px;
+  	float: left;
+  }
+
+  .other-message {
+  	float: right;
+  }
+
+  .msg-tag {
+  	text-align: right;
+  }
+
+  .timestamp {
+  	font-size: 10px;
+  }
+
+  .msg-icon {
+  	display: inline-block;
+  	margin-right: 5px;
+  	margin-left: 5px;
+  	border-radius: 50%;
   }

@@ -1,17 +1,28 @@
-<p><%= message.body %></p>
-<div class="msg-tag"><span class="timestamp">
-	<% if message.user.role == "user" %>
-		<%= message.user.alias + " asked " %>
-	<% else %>
-		<%= "answered " %>
-	<% end %>
-	<% if message.id == 1 %>
-		2 mins ago
-	<% elsif message.id == 2 %>
-		15 seconds ago
-	<% else %>
-		<%= time_ago_in_words(message.created_at) %> ago
+<% if message.user.id == @current_user.id %>
+	<div class="msg-container my-message">
+		<%= image_tag("pinkbunny.png", class: "img-responsive msg-icon") %>
+<% else %>
+	<div class="msg-container other-message">
+<% end %>
+	<div class="message">
+		<p><%= message.body %></p>
+		<div class="msg-tag">
+			<% if message.user.role == "user" %>
+				<%= message.user.alias %><span class="timestamp"><%= " asked " %>
+			<% else %>
+				<span class="timestamp"><%= "answered " %>
+			<% end %>
+			<% if message.id == 1 %>
+				2 mins ago
+			<% elsif message.id == 2 %>
+				15 seconds ago
+			<% else %>
+				<%= time_ago_in_words(message.created_at) %> ago</span>
+			<% end %>
+		</div>
+	</div>
+	<% if message.user.id == @other_user.id %>
+		<%= image_tag("kristy_profile.png", class: "img-responsive msg-icon") %>
 	<% end %>
 </div>
-
 
