@@ -1,5 +1,5 @@
 $(document).ready(function() {
-var root = "http://localhost:3000/"
+var root = 	"hookupsexed.herokuapp.com"		//"http://localhost:3000/"
 	if (window.location.href == root) {
 		var slide = 1;
 		$('body').click(function() {
@@ -14,7 +14,7 @@ var root = "http://localhost:3000/"
 				$('#slide-3').show();
 			}
 			else if (slide == 3) {
-				window.location.href = root + "conversations/new?user=1";
+				window.location.href = root + "/conversations/new?user=1";
 				return;
 			}
 			slide += 1;
