@@ -1,0 +1,17 @@
+<p><%= message.body %></p>
+<div class="msg-tag"><span class="timestamp">
+	<% if message.user.role == "user" %>
+		<%= message.user.alias + " asked " %>
+	<% else %>
+		<%= "answered " %>
+	<% end %>
+	<% if message.id == 1 %>
+		2 mins ago
+	<% elsif message.id == 2 %>
+		15 seconds ago
+	<% else %>
+		<%= time_ago_in_words(message.created_at) %> ago
+	<% end %>
+</div>
+
+
