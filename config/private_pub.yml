@@ -7,4 +7,4 @@ test:
 production:
   server: "http://hse-fayeserver.herokuapp.com/faye"
   secret_token: "0e1150f6e4b572f7f4413369aae231eff6776a28d2bde03360a7852b80cb7156"
-  signature_expiration: 3600 # one hour
+  signature_expiration: 86400 # one day
