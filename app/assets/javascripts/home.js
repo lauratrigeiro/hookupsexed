@@ -1,5 +1,5 @@
 $(document).ready(function() {
-var root = 	"hookupsexed.herokuapp.com"		//"http://localhost:3000/"
+var root = 	"hookupsexed.herokuapp.com"
 	if (window.location.href == root) {
 		var slide = 1;
 		$('body').click(function() {
