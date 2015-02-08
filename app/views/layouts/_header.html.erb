@@ -1,0 +1,29 @@
+<div class="navbar navbar-default white light-blue">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to image_tag("hookuplogo.png", id: "logo", class: "img-responsive"), 
+							root_path %>
+    </div>
+    <ul class="nav navbar-nav pull-right"> 
+    	<li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: #2A8AA7;">HOOKUP <span class="caret"></span></a>
+			          <ul class="dropdown-menu" role="menu">
+			            <li><%= link_to "Ask a Sexpert", "#" %></li>
+			            <li><%= link_to "Foreplay", "#" %></li>
+			            <li><%= link_to "Are You a Sex Master?", "#" %></li>
+			            <li><%= link_to "Share Your Story", "#" %></li>
+			            <li><%= link_to "Nearby You", "#" %></li>
+			            <li><%= link_to "Get Sexy Library", "#" %></li>
+			          </ul>
+			        </li>
+			       <li> <%= image_tag("pinkbunny_small.png", id: "bunny-small", class: "img-responsive") %></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: #2A8AA7;">PINKBUNNY <span class="caret"></span></a>
+			          <ul class="dropdown-menu" role="menu">
+			            <li><%= link_to 'Edit Profile', "#" %></li>
+			            <li class="divider"></li>
+			            <li><%= link_to "Logout", "#", method: :delete %></li>
+			          </ul>
+			        </li>
+  </div>
+</div>
